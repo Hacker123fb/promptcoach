@@ -56,14 +56,14 @@ def _parse_scores(raw_scores: dict, label: str) -> PromptScores:
     return PromptScores(**scores)
 
 
-def run_scoring(original: str, improved: str) -> ScoringResult:
+def run_scoring(original: str, improved: str, model: str = None) -> ScoringResult:
     """
     Call the Gemini judge, parse the response, and return a ScoringResult.
     Raises RuntimeError / ValueError with clear messages on failure.
     """
     from llm import score_prompts  # avoid circular at module load
 
-    raw = score_prompts(original, improved)
+    raw = score_prompts(original, improved, model=model)
 
     original_scores = _parse_scores(raw["scores"], "original")
     improved_scores = _parse_scores(raw["scores"], "improved")

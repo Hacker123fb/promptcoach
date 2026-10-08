@@ -74,8 +74,8 @@ def _parse_json_robust(raw: str) -> dict:
             ) from exc
 
 
-def _candidate_models() -> list[str]:
-    primary = _model_name()
+def _candidate_models(override_model: str = None) -> list[str]:
+    primary = override_model.strip() if override_model and override_model.strip() else _model_name()
     candidates = [primary, "gemini-3.5-flash", "gemini-3.7-flash"]
     seen = set()
     result = []
@@ -86,7 +86,7 @@ def _candidate_models() -> list[str]:
     return result
 
 
-def _chat(system_prompt: str, user_message: str, *, retry: bool = True) -> str:
+def _chat(system_prompt: str, user_message: str, *, model: str = None, temperature: float = 0.4, retry: bool = True) -> str:
     """
     Send a single-turn system+user message to Gemini and return the text.
     Retries once on rate-limit / transient errors, and falls back across candidate models.
@@ -94,7 +94,7 @@ def _chat(system_prompt: str, user_message: str, *, retry: bool = True) -> str:
     from google.genai import types
 
     client = get_client()
-    models = _candidate_models()
+    models = _candidate_models(model)
     last_exc = None
 
     for m in models:
@@ -104,7 +104,7 @@ def _chat(system_prompt: str, user_message: str, *, retry: bool = True) -> str:
                 contents=user_message,
                 config=types.GenerateContentConfig(
                     system_instruction=system_prompt,
-                    temperature=0.4,
+                    temperature=temperature,
                 ),
             )
             return response.text
@@ -131,7 +131,7 @@ def _chat(system_prompt: str, user_message: str, *, retry: bool = True) -> str:
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
-def improve_prompt(weak_prompt: str, goal: str = "", audience: str = "") -> dict:
+def improve_prompt(weak_prompt: str, goal: str = "", audience: str = "", model: str = None, temperature: float = 0.4) -> dict:
     """
     Rewrite *weak_prompt* using the R-C-T-F-C framework.
 
@@ -142,7 +142,7 @@ def improve_prompt(weak_prompt: str, goal: str = "", audience: str = "") -> dict
     from prompts import IMPROVE_SYSTEM_PROMPT, build_improve_user_message
 
     user_msg = build_improve_user_message(weak_prompt, goal, audience)
-    raw = _chat(IMPROVE_SYSTEM_PROMPT, user_msg)
+    raw = _chat(IMPROVE_SYSTEM_PROMPT, user_msg, model=model, temperature=temperature)
     result = _parse_json_robust(raw)
 
     # Validate required keys
@@ -154,7 +154,7 @@ def improve_prompt(weak_prompt: str, goal: str = "", audience: str = "") -> dict
     return result
 
 
-def run_prompt(prompt: str) -> str:
+def run_prompt(prompt: str, model: str = None, temperature: float = 0.7) -> str:
     """
     Run *prompt* through Gemini with no system instruction and return the text response.
     Used for the before/after comparison.
@@ -162,7 +162,7 @@ def run_prompt(prompt: str) -> str:
     from google.genai import types
 
     client = get_client()
-    models = _candidate_models()
+    models = _candidate_models(model)
     last_exc = None
 
     for m in models:
@@ -170,7 +170,7 @@ def run_prompt(prompt: str) -> str:
             response = client.models.generate_content(
                 model=m,
                 contents=prompt,
-                config=types.GenerateContentConfig(temperature=0.7),
+                config=types.GenerateContentConfig(temperature=temperature),
             )
             return response.text
         except Exception as exc:
@@ -183,7 +183,7 @@ def run_prompt(prompt: str) -> str:
     raise RuntimeError(f"Gemini call failed for prompt execution across models: {last_exc}")
 
 
-def score_prompts(original: str, improved: str) -> dict:
+def score_prompts(original: str, improved: str, model: str = None) -> dict:
     """
     Ask Gemini to score *original* vs *improved* prompts and provide tips.
 
@@ -194,7 +194,7 @@ def score_prompts(original: str, improved: str) -> dict:
     from prompts import SCORE_SYSTEM_PROMPT, build_score_user_message
 
     user_msg = build_score_user_message(original, improved)
-    raw = _chat(SCORE_SYSTEM_PROMPT, user_msg)
+    raw = _chat(SCORE_SYSTEM_PROMPT, user_msg, model=model, temperature=0.3)
     result = _parse_json_robust(raw)
 
     if "scores" not in result or "tips" not in result:

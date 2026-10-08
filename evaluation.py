@@ -46,7 +46,7 @@ class EvalResult:
 # ---------------------------------------------------------------------------
 # Single-item evaluator (called per-prompt in the UI loop)
 # ---------------------------------------------------------------------------
-def run_single_eval(domain: str, weak_prompt: str) -> EvalResult:
+def run_single_eval(domain: str, weak_prompt: str, model: str = None) -> EvalResult:
     """
     Improve *weak_prompt* with Gemini, then score original vs improved.
     Returns an EvalResult; on failure fills the .error field and sets
@@ -56,9 +56,9 @@ def run_single_eval(domain: str, weak_prompt: str) -> EvalResult:
     from scoring import run_scoring
 
     try:
-        improvement   = improve_prompt(weak_prompt)
+        improvement   = improve_prompt(weak_prompt, model=model)
         improved_text = improvement["improved_prompt"]
-        sr            = run_scoring(weak_prompt, improved_text)
+        sr            = run_scoring(weak_prompt, improved_text, model=model)
         return EvalResult(
             domain          = domain,
             weak_prompt     = weak_prompt,
