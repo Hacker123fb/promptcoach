@@ -76,7 +76,7 @@ def _parse_json_robust(raw: str) -> dict:
 
 def _candidate_models(override_model: str = None) -> list[str]:
     primary = override_model.strip() if override_model and override_model.strip() else _model_name()
-    candidates = [primary, "gemini-3.5-flash", "gemini-3.7-flash"]
+    candidates = [primary, "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
     seen = set()
     result = []
     for c in candidates:

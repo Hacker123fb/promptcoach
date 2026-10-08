@@ -67,4 +67,4 @@ def get_model_name() -> str:
     if env_val and env_val not in ("gemini-2.5-flash", "gemini-2.0-flash"):
         return env_val
 
-    return "gemini-3.5-flash"
+    return "gemini-3.5-flash-lite"

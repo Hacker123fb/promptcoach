@@ -1,0 +1,280 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "timestamp": "2026-10-08 20:22:24",
+  "run1": [
+    {
+      "domain": "Education",
+      "weak_prompt": "explain photosynthesis",
+      "improved_prompt": "Role: You are an expert science communicator and educator.\nContext: The user wants to understand the biological process of photosynthesis, typically taught in middle or high school biology, but needs it explained in an engaging and accessible way without losing scientific accuracy.\nTask: Explain the process of photosynthesis, including the main inputs (sunlight, water, carbon dioxide), outputs (glucose, oxygen), and where it occurs within the plant cell.\nFormat: Use clear headings, bullet points for key steps, and a brief analogical summary at the end.\nConstraints: Avoid overly dense academic jargon where simple terms work, keep the total explanation under 400 words, and ensure all scientific facts are accurate.",
+      "original_score": 14,
+      "improved_score": 46,
+      "improvement": 32,
+      "error": ""
+    },
+    {
+      "domain": "Coding",
+      "weak_prompt": "write python code",
+      "improved_prompt": "Role: You are an expert Python software engineer and coding instructor with a focus on writing clean, efficient, and PEP 8-compliant code.\n\nContext: The user needs a custom Python solution but has not yet specified the exact functionality, domain, or requirements. You need to provide a practical, well-structured example while prompting them for specifics.\n\nTask: Write a Python script that demonstrates a common, highly useful utility (such as a robust file organizer or a web scraper using BeautifulSoup), including clear inline comments and a docstring.\n\nFormat: Provide the response as a single, copy-pasteable Python code block followed by a brief 2-3 sentence explanation of how the code works and a prompt asking the user for their specific requirements.\n\nConstraints: The code must be compatible with Python 3.10+, include basic error handling (try/except blocks), and avoid external libraries beyond standard built-ins unless explicitly necessary for the demonstration.",
+      "original_score": 7,
+      "improved_score": 44,
+      "improvement": 37,
+      "error": ""
+    },
+    {
+      "domain": "Marketing",
+      "weak_prompt": "write an ad",
+      "improved_prompt": "Role: You are an expert copywriter and marketing strategist specializing in high-converting digital advertisements.\n\nContext: We are launching a new productivity app called 'TaskFlow' designed for remote workers who struggle with time management and daily distraction.\n\nTask: Write a compelling, high-converting social media ad for TaskFlow.\n\nFormat: Present the output in two sections: 1) The Ad Copy (including headline, body text, and a clear call-to-action), and 2) A brief visual direction note for the image or video to accompany the ad.\n\nConstraints: The tone must be engaging, professional, yet conversational. Keep the body text under 150 words. Do not use generic buzzwords like 'synergy' or 'game-changer.'",
+      "original_score": 7,
+      "improved_score": 46,
+      "improvement": 39,
+      "error": ""
+    },
+    {
+      "domain": "Health",
+      "weak_prompt": "give me a diet plan",
+      "improved_prompt": "Role: You are an expert clinical nutritionist and registered dietitian.\n\nContext: The user is looking for a structured diet plan to help improve their overall health, but has not yet provided specific goals, dietary restrictions, or lifestyle details. As a professional, you need to provide a balanced sample plan while gathering necessary information.\n\nTask: Create a comprehensive 7-day balanced sample diet plan (breakfast, lunch, dinner, and two snacks per day), and include a brief questionnaire at the end asking for the user's specific goals, allergies, and daily activity level to personalize it further.\n\nFormat: Use clear Markdown headings for each day of the week, bullet points for meal breakdowns, and a separate section for the intake questionnaire.\n\nConstraints: Ensure the diet plan promotes whole foods and balanced macronutrients. Do not provide medical advice or treat specific health conditions. Maintain an encouraging, professional, and supportive tone.",
+      "original_score": 7,
+      "improved_score": 45,
+      "improvement": 38,
+      "error": ""
+    },
+    {
+      "domain": "Writing",
+      "weak_prompt": "write a story",
+      "improved_prompt": "Role: You are an award-winning flash fiction author known for gripping, atmospheric storytelling with unexpected plot twists.\n\nContext: We are hosting a community writing contest centered on the theme of 'hidden doors,' exploring how a single discovery can completely alter a character's reality.\n\nTask: Write a short, complete fictional story about a protagonist who discovers a hidden door in their childhood home that they never noticed before.\n\nFormat: 1. A compelling title\n2. The story itself, divided into three distinct paragraphs (Introduction, Climax, Resolution)\n3. Word count between 300 and 500 words.\n\nConstraints: Maintain a suspenseful and mysterious tone throughout. Do not use clichés or supernatural elements (keep the twist grounded in psychological or realistic terms). Avoid overly flowery language; focus on sensory details.",
+      "original_score": 9,
+      "improved_score": 47,
+      "improvement": 38,
+      "error": ""
+    },
+    {
+      "domain": "Business",
+      "weak_prompt": "write a business plan",
+      "improved_prompt": "Role: You are an expert startup consultant and venture capitalist advisor.\nContext: An aspiring entrepreneur needs a comprehensive, professional business plan to secure seed funding and guide their initial operations for a new direct-to-consumer sustainable apparel brand.\nTask: Write a detailed business plan that outlines the company's vision, market opportunity, target audience, marketing strategy, operational plan, and financial projections.\nFormat: Use a professional executive layout complete with an Executive Summary, Company Description, Market Analysis, Organization & Management, Service/Product Line, Marketing & Sales, and Financial Projections.\nConstraints: Maintain a professional, persuasive, and realistic tone. Do not use generic placeholders; provide concrete, realistic examples suitable for a modern eco-friendly apparel business.",
+      "original_score": 7,
+      "improved_score": 46,
+      "improvement": 39,
+      "error": ""
+    },
+    {
+      "domain": "Science",
+      "weak_prompt": "explain quantum physics",
+      "improved_prompt": "Role: You are an expert theoretical physicist and master science communicator known for making complex topics accessible and engaging.\n\nContext: The user is a curious adult with a general background in science but no formal training in advanced mathematics or physics, looking to understand the core concepts of quantum mechanics without getting bogged down by equations.\n\nTask: Explain the foundational concepts of quantum physics (such as wave-particle duality, superposition, and entanglement) in clear, intuitive terms, using relatable analogies.\n\nFormat: Use a structured layout with a brief introduction, followed by 3 distinct sections for the core concepts (each with a real-world analogy), and a short concluding summary.\n\nConstraints: Avoid complex mathematical equations and heavy jargon. Keep the explanation under 500 words and maintain an inspiring, accessible tone.",
+      "original_score": 14,
+      "improved_score": 47,
+      "improvement": 33,
+      "error": ""
+    },
+    {
+      "domain": "Travel",
+      "weak_prompt": "plan a trip",
+      "improved_prompt": "Role: You are an expert senior travel planner and local guide.\nContext: I am looking to take a 7-day vacation and need a comprehensive, well-structured itinerary that balances sightseeing, relaxation, and dining, without feeling overly rushed.\nTask: Create a complete 7-day travel itinerary for a destination of your choice (or suggest a top-tier destination like Kyoto, Japan), including daily schedules, recommended accommodations, must-see attractions, and local food recommendations.\nFormat: Organize the response using clear markdown headings for each day, bullet points for morning/afternoon/evening activities, and a dedicated summary section for logistics and tips.\nConstraints: Keep the daily itinerary realistic with sensible travel times between locations. Provide actionable recommendations rather than generic advice. Do not assume any specific budget, but include a mix of free activities and paid highlights.",
+      "original_score": 6,
+      "improved_score": 43,
+      "improvement": 37,
+      "error": ""
+    },
+    {
+      "domain": "Finance",
+      "weak_prompt": "explain investing",
+      "improved_prompt": "Role: You are an expert financial advisor and educator who specializes in breaking down complex financial concepts for absolute beginners.\n\nContext: Many everyday people feel intimidated by the stock market and investing because of jargon, fear of losing money, and lack of foundational knowledge. They need a clear, reassuring, and practical starting point.\n\nTask: Explain the core concepts of investing, covering what it is, why people do it, the difference between saving and investing, major asset classes (stocks, bonds, mutual funds/ETFs), and the golden rules for beginner investors (e.g., diversification, compound interest, long-term horizon).\n\nFormat: Present the explanation using clear headings, bullet points for readability, and a relatable real-world analogy to illustrate how compound interest works. Keep the total length around 500-700 words.\n\nConstraints: Avoid overly technical jargon, market timing advice, or specific stock recommendations. Maintain an encouraging, objective, and educational tone at all times. Include a standard financial disclaimer at the end.",
+      "original_score": 9,
+      "improved_score": 47,
+      "improvement": 38,
+      "error": ""
+    },
+    {
+      "domain": "Career",
+      "weak_prompt": "help me with my resume",
+      "improved_prompt": "Role: You are an expert executive resume writer and career coach with 15+ years of experience helping professionals land interviews at Fortune 500 companies.\n\nContext: I am preparing to apply for mid-to-senior level roles in my field, but my current resume feels outdated, lacks strong impact metrics, and doesn't clearly highlight my core competencies.\n\nTask: Analyze my career background, identify areas for improvement, and rewrite my professional summary and top three recent job entries to maximize ATS compatibility and recruiter engagement.\n\nFormat: Provide your response in clear sections:\n1. Overall Feedback & ATS Recommendations\n2. Rewritten Professional Summary\n3. Rewritten Experience Bullet Points (using the Action-Context-Result framework)\n4. Key Skills Section\n\nConstraints: Maintain a professional, results-oriented, and confident tone. Do not invent false metrics; use placeholders like '[X]%' where quantifiable data is needed. Keep the final output concise and ready to copy into a standard resume template.",
+      "original_score": 7,
+      "improved_score": 47,
+      "improvement": 40,
+      "error": ""
+    }
+  ],
+  "run2": [
+    {
+      "domain": "Education",
+      "weak_prompt": "explain photosynthesis",
+      "improved_prompt": "Role: You are an expert science educator known for making complex biological concepts accessible and engaging.\n\nContext: You are writing a guest post for a popular science blog read by high school students who are curious about biology but easily bored by dense textbook language.\n\nTask: Explain the process of photosynthesis, detailing how plants convert sunlight, water, and carbon dioxide into glucose and oxygen, and briefly explaining why this process is vital for life on Earth.\n\nFormat: Use clear headings, bullet points for the key steps, and a brief analogy in the introduction to hook the reader.\n\nConstraints: Keep the explanation under 400 words. Avoid overly academic jargon where possible, or define it immediately if used. Maintain an enthusiastic and accessible tone.",
+      "original_score": 14,
+      "improved_score": 49,
+      "improvement": 35,
+      "error": ""
+    },
+    {
+      "domain": "Coding",
+      "weak_prompt": "write python code",
+      "improved_prompt": "Role: You are an expert Python software engineer and coding tutor. Context: The user needs a practical, efficient, and well-documented Python script to solve a specific programming problem, but no details have been provided yet. Task: Write a versatile, standard-compliant Python script (such as a data processing utility or a REST API fetcher) that demonstrates best practices, including robust error handling and type hinting. Format: Provide the response as a single markdown code block with inline comments, followed by a brief 2-3 sentence explanation of how the code works and instructions on how to run it. Constraints: Use modern Python 3.x syntax, ensure the code is completely self-contained with no external dependencies beyond the standard library, and maintain clean, PEP 8-compliant formatting.",
+      "original_score": 7,
+      "improved_score": 40,
+      "improvement": 33,
+      "error": ""
+    },
+    {
+      "domain": "Marketing",
+      "weak_prompt": "write an ad",
+      "improved_prompt": "Role: You are an expert direct-response copywriter and marketing strategist specializing in high-converting digital advertising.\n\nContext: We are launching a new productivity app called 'FocusFlow' designed to help remote workers eliminate distractions and double their daily output without burnout.\n\nTask: Write a compelling Facebook ad designed to drive app downloads.\n\nFormat: Provide the output with clearly labeled sections: \n1. Hook / Scroll-Stopper (Headline)\n2. Body Copy (Pain point, solution, and features)\n3. Call to Action (CTA)\n4. Visual Suggestion (A brief description of the accompanying image or video)\n\nConstraints: Keep the body copy under 150 words. The tone should be energetic, empathetic, and professional. Avoid overly aggressive sales jargon or fake urgency. Do not use generic buzzwords like 'synergy' or 'game-changer.'",
+      "original_score": 7,
+      "improved_score": 48,
+      "improvement": 41,
+      "error": ""
+    },
+    {
+      "domain": "Health",
+      "weak_prompt": "give me a diet plan",
+      "improved_prompt": "Role: You are an expert clinical nutritionist and registered dietitian.\n\nContext: The user is looking to improve their general health, energy levels, and eating habits through a structured dietary approach, but has not yet provided specific health metrics, dietary restrictions, or calorie goals.\n\nTask: Provide a comprehensive, highly adaptable 7-day sample diet plan. Include breakfast, lunch, dinner, and two daily snacks, emphasizing whole foods, balanced macronutrients (proteins, complex carbs, healthy fats), and hydration.\n\nFormat: Present the output in a clean, day-by-day markdown table or bulleted list. Include a brief summary of daily nutritional goals (estimated calories/macros range) at the top of the plan.\n\nConstraints: Do not prescribe medical diets for severe health conditions (e.g., severe diabetes, kidney disease). Include a standard medical disclaimer advising the user to consult a healthcare professional before starting any new diet. Keep the tone encouraging, professional, and informative.",
+      "original_score": 9,
+      "improved_score": 42,
+      "improvement": 33,
+      "error": ""
+    },
+    {
+      "domain": "Writing",
+      "weak_prompt": "write a story",
+      "improved_prompt": "Act as an award-winning creative fiction author. I need a short story (approx. 800-1,000 words) centered on the theme of 'rediscovery' in a post-apocalyptic setting. The narrative should follow a protagonist who finds a relic from the 'old world' that changes their perspective on their current survivalist lifestyle. Please structure the story with a clear inciting incident, a rising action, and a poignant, open-ended conclusion. Use a tone that is atmospheric, melancholic, but ultimately hopeful. Do not include excessive gore or explicit violence, and ensure the prose is descriptive and sensory-focused.",
+      "original_score": 14,
+      "improved_score": 48,
+      "improvement": 34,
+      "error": ""
+    },
+    {
+      "domain": "Business",
+      "weak_prompt": "write a business plan",
+      "improved_prompt": "Role: You are an expert startup consultant and venture capital advisor with deep experience in business strategy and financial modeling.\n\nContext: An entrepreneur is launching a new business concept and needs a comprehensive, professional blueprint to guide their initial operations, secure stakeholder buy-in, and attract potential investors.\n\nTask: Write a detailed business plan for a modern, scalable business concept of your choice (or assume a sustainable boutique coffee-to-workspace cafe if none is specified).\n\nFormat: Structure the output using clear markdown headings corresponding to standard business plan sections: Executive Summary, Company Description, Market Analysis, Organization & Management, Service/Product Line, Marketing & Sales Strategy, and Financial Projections.\n\nConstraints: Keep the total length under 1,500 words. Use a professional, persuasive, and realistic tone. Avoid overly generic buzzwords and ensure the financial projections include plausible baseline assumptions.",
+      "original_score": 9,
+      "improved_score": 44,
+      "improvement": 35,
+      "error": ""
+    },
+    {
+      "domain": "Science",
+      "weak_prompt": "explain quantum physics",
+      "improved_prompt": "Role: You are an award-winning theoretical physicist and science communicator known for making complex concepts engaging and accessible to the general public.\n\nContext: The user is a curious adult with no formal background in physics who wants a foundational understanding of quantum mechanics without getting bogged down in advanced mathematics.\n\nTask: Explain the core principles of quantum physics—specifically superposition, entanglement, and wave-particle duality—using clear conceptual explanations and relatable everyday analogies.\n\nFormat: Structure the response with an engaging introduction, distinct sections for each core principle featuring a 'Real-World Analogy' subsection, and a brief concluding summary of why quantum physics matters today.\n\nConstraints: Avoid overly technical jargon and heavy mathematical formulas. Keep the total length under 600 words, maintain an enthusiastic and encouraging tone, and do not use Schrödinger's cat cliché more than once.",
+      "original_score": 9,
+      "improved_score": 49,
+      "improvement": 40,
+      "error": ""
+    },
+    {
+      "domain": "Travel",
+      "weak_prompt": "plan a trip",
+      "improved_prompt": "Role: You are an expert travel planner and itinerary coordinator with extensive global knowledge.\nContext: The user wants to take a vacation but has not provided any details about destination, budget, duration, or preferences yet, so you need to guide them through the planning process efficiently.\nTask: Create a comprehensive travel planning questionnaire and outline a step-by-step framework to help the user define their ideal trip.\nFormat: Use clear headings, bullet points, and numbered lists to make the planning process organized and easy to follow.\nConstraints: Ask focused, high-impact questions (e.g., budget, travel dates, interests, departure city) and avoid making assumptions about the destination.",
+      "original_score": 5,
+      "improved_score": 44,
+      "improvement": 39,
+      "error": ""
+    },
+    {
+      "domain": "Finance",
+      "weak_prompt": "explain investing",
+      "improved_prompt": "Role: You are a certified financial planner and expert financial educator known for making complex topics accessible to complete beginners.\n\nContext: Many adults feel intimidated by the stock market and financial jargon, leading them to avoid investing altogether and miss out on long-term wealth building.\n\nTask: Explain the core fundamentals of investing, covering what it is, why it matters, different asset classes (stocks, bonds, real estate), and the concept of compound interest.\n\nFormat: Use clear headings, bullet points for key takeaways, and a simple real-world analogy to illustrate compound interest.\n\nConstraints: Avoid overly technical jargon without immediate definitions. Keep the tone encouraging, objective, and easy to understand. Do not provide specific stock recommendations or personalized financial advice.",
+      "original_score": 9,
+      "improved_score": 46,
+      "improvement": 37,
+      "error": ""
+    },
+    {
+      "domain": "Career",
+      "weak_prompt": "help me with my resume",
+      "improved_prompt": "Role: You are an expert executive resume writer and career coach with 15+ years of experience helping professionals land interviews at Fortune 500 companies.\n\nContext: My current resume is outdated, lacks impact, and fails to get past Applicant Tracking Systems (ATS). I need to reposition myself for higher-level roles in my industry.\n\nTask: Review my current resume details, identify major weaknesses in my bullet points and summary, and rewrite them to highlight quantifiable achievements and powerful action verbs.\n\nFormat: Provide your response in three distinct sections: 1) Executive Summary critique and rewrite, 2) Professional Experience bullet point transformations (Before & After), and 3) Top 3 ATS optimization recommendations.\n\nConstraints: Do not invent false experience or metrics. Keep the tone professional, encouraging, and direct. Use markdown formatting with clear headings for readability.",
+      "original_score": 7,
+      "improved_score": 46,
+      "improvement": 39,
+      "error": ""
+    }
+  ],
+  "cases": [
+    {
+      "domain": "Environmental Science",
+      "weak_prompt": "write about climate change",
+      "goal": "High school science project overview",
+      "audience": "10th grade biology students",
+      "improved_prompt": "Role: You are an expert environmental science educator and curriculum designer.\n\nContext: You are creating an introductory overview for 10th-grade biology students who are about to start a multi-week science project on climate change. They understand basic ecological concepts like ecosystems, food webs, and photosynthesis, but need a clear, engaging bridge connecting these concepts to global climate shifts.\n\nTask: Write a comprehensive project overview that explains the biological impacts of climate change (such as habitat loss, shifts in migration patterns, and ocean acidification), outlines the core scientific questions students will investigate, and inspires curiosity about real-world ecological conservation.\n\nFormat: Use an engaging, student-friendly tone organized with clear headings:\n1. Project Hook (an opening paragraph drawing students in)\n2. The Big Picture (how climate change interacts with biological systems)\n3. Key Research Areas (3-4 bulleted biological focus topics for their projects)\n4. Guiding Questions (open-ended questions to spark their inquiry)\n\nConstraints: Avoid overly dense academic jargon or complex policy/economic debates; keep the focus strictly on biological and ecological impacts. Limit the total response to around 400-500 words.",
+      "original_total": 9,
+      "improved_total": 49,
+      "original_breakdown": {
+        "Clarity": 5,
+        "Specificity": 1,
+        "Context": 1,
+        "Format": 1,
+        "Constraints": 1
+      },
+      "improved_breakdown": {
+        "Clarity": 10,
+        "Specificity": 10,
+        "Context": 10,
+        "Format": 9,
+        "Constraints": 10
+      },
+      "tips": [
+        "Specify an exact word count range rather than 'around 400-500 words' to give the AI a firmer boundary.",
+        "Include a designated section for examples of successful student projects to make the prompt even more actionable.",
+        "Define the reading level or Flesch-Kincaid grade level explicitly to ensure the tone hits the 10th-grade target perfectly."
+      ],
+      "orig_output": "Climate change is the defining crisis of our time. It is no longer a distant threat looming on the horizon; it is an unfolding reality reshaping our weather patterns, melting our glaciers, threatening our food security, and altering the very fabric of life on Earth. \n\nTo understand climate change is to understand the interconnectedness of our planet. Here is an exploration of what it is, why it’s happening, the impacts we are facing, and the path forward.\n\n---\n\n### 1. The Science: A Heat-Trapping Blanket\nAt its core, climate change is driven by the **greenhouse effect**. Certain gases in Earth’s atmosphere—primarily carbon dioxide ($CO_2$), methane ($CH_4$), and nitrous oxide ($N_2O$)—act like the glass of a greenhouse. They let sunlight in, but they trap the heat that radiates back up from the Earth's surface. \n\nFor millennia, this natural greenhouse effect kept Earth warm enough to sustain life, maintaining an average global temperature of about 14°C (57°F). \n\nHowever, since the Industrial Revolution in the 18th century, human activity has dramatically accelerated the release of these gases. The burning of fossil fuels (coal, oil, and natural gas) for energy and transportation, combined with widespread deforestation and intensive agriculture, has spiked atmospheric $CO_2$ to levels not seen in millions of years. We have wrapped our planet in an increasingly thick blanket, causing global temperatures to rise.\n\n### 2. The Manifestations: How the Earth is Changing\nThe symptoms of a warming planet are visible across every continent and ocean:\n\n*   **Rising Temperatures:** The decade from 2011 to 2020 was the warmest on record. Heatwaves are becoming longer, more frequent, and deadlier.\n*   **Melting Ice and Rising Seas:** Greenland and Antarctica are shedding ice sheets at staggering rates, and mountain glaciers are disappearing. This meltwater, combined with the thermal expansion of warming oceans, is causing sea levels to rise. Coastal cities face the constant threat of erosion, flooding, and eventual inundation.\n*   **Extreme Weather:** A warmer atmosphere holds more moisture and has more energy. This translates to hyper-charged storms, catastrophic hurricanes, prolonged droughts, and torrential rainfall that triggers devastating floods.\n*   **Ecological Collapse:** Ecosystems are struggling to adapt to the speed of change. Coral reefs are bleaching and dying due to ocean acidification and warming waters. Forests are being decimated by unprecedented wildfires and pest outbreaks. Countless species are facing extinction as their habitats vanish.\n\n### 3. The Human Toll: Justice and Equity\nClimate change is not just an environmental issue; it is a profound human rights and social justice issue. \n\nIts impacts are deeply inequitable. The nations and communities that have contributed the least to global emissions—often developing countries in the Global South, indigenous populations, and impoverished communities—are suffering the worst consequences. Crop failures lead to famine, water scarcity sparks conflict, and extreme weather creates millions of \"climate refugees\" forced to flee their homes.\n\n### 4. The Path Forward: Mitigation and Adaptation\nWhile the challenge is immense, humanity is not powerless. Addressing climate change requires a two-pronged approach: **mitigation** (stopping it from getting worse) and **adaptation** (learning to live with the changes we can no longer avoid).\n\n*   **The Energy Transition:** We must rapidly shift away from fossil fuels and transition to renewable energy sources, such as solar, wind, and geothermal power. Electrifying transportation and improving energy efficiency are equally crucial.\n*   **Protecting Nature:** Forests and oceans are our greatest carbon sinks. Stopping deforestation, restoring degraded lands, and practicing regenerative agriculture can draw vast amounts of carbon out of the atmosphere.\n*   **Systemic and Policy Change:** Individual actions—like recycling, eating less meat, and driving less—are important, but the heavy lifting requires systemic change. Governments must implement robust carbon pricing, phase out fossil fuel subsidies, and invest in green infrastructure.\n*   **Technological Innovation:** Continued investment in battery storage, green hydrogen, and even carbon capture and storage (CCS) will be vital tools in the transition.\n\n### Conclusion\nClimate change represents an unprecedented test for humanity. It demands a level of global cooperation, foresight, and empathy that we have rarely had to muster before. \n\nThe choices we make this decade will determine the trajectory of civilization for centuries to come. We possess the technology, the knowledge, and the resources to avert catastrophe. What remains to be seen is whether we have the collective will to use them.",
+      "impr_output": "### 1. Project Hook\nImagine walking through a forest where the spring flowers bloom a month earlier than they used to, or diving into a coral reef that has turned an eerie, bleached white. These aren't scenes from a sci-fi movie—they are happening right now on our planet. Earth’s climate is shifting rapidly, and as biologists, we know that life doesn't just exist in an environment; it responds to it. Over the next few weeks, you aren't just going to learn about climate change from a textbook. You are going to step into the shoes of field scientists to investigate how rising temperatures and changing chemistry are rewriting the rules of survival for Earth's living systems. \n\n### 2. The Big Picture\nYou already know that ecosystems are delicate, interconnected webs of life. Photosynthesis drives energy flow, food chains connect predators and prey, and every species plays a specific role. But what happens when the foundation of that web starts to wobble? Climate change acts like a stress test for the biosphere. When global temperatures rise and weather patterns shift, it alters the fundamental conditions that living things have adapted to over thousands of years. From the microscopic plankton in the ocean to the apex predators in the tundra, every organism is feeling the ripple effects. This project is your chance to uncover how living systems are coping, adapting, or struggling to keep pace with a fast-changing world.\n\n### 3. Key Research Areas\nDuring your project, you will dive deep into one of these core biological focus areas:\n*   **Habitat Loss & Range Shifts:** As temperatures warm, many species are forced to move toward the poles or higher up mountains to find cooler homes—leaving some organisms with nowhere left to go.\n*   **Phenological Mismatches:** This is the disruption of timing in nature. For example, if spring arrives earlier, do migratory birds arrive too late to catch peak insect hatches? \n*   **Ocean Acidification:** As oceans absorb excess carbon dioxide from the atmosphere, the water becomes more acidic, making it difficult for marine organisms like corals and shellfish to build and maintain their shells.\n*   **Trophic Cascades:** When climate change impacts a single key species (like sea ice loss affecting algae and krill), it triggers a domino effect that disrupts the entire food web.\n\n### 4. Guiding Questions\nAs you begin your research, keep these big questions at the front of your mind:\n*   How do shifts in non-living factors (like temperature and pH) trigger chain reactions through living food webs?\n*   Why are some species able to adapt quickly to environmental changes while others face the threat of extinction?\n*   What can the study of current ecological disruptions teach us about protecting biodiversity for the future?\n\nGet ready to investigate, collaborate, and discover how life on Earth is responding to its greatest modern challenge. The ecosystems of tomorrow are counting on scientists like you to understand them today!"
+    },
+    {
+      "domain": "Software Engineering",
+      "weak_prompt": "write python code",
+      "goal": "Create a thread-safe in-memory LRU cache",
+      "audience": "Senior Backend Engineers",
+      "improved_prompt": "Role: You are a Principal Systems Architect and Python Expert specializing in concurrent programming and high-performance data structures.\n\nContext: We are building a high-throughput backend service that requires a thread-safe, in-memory Least Recently Used (LRU) cache to mitigate database query latency under heavy multi-threaded loads.\n\nTask: Write production-ready Python 3 code for a thread-safe LRU cache. The implementation must use built-in synchronization primitives (like threading.Lock) and an efficient underlying data structure (such as collections.OrderedDict) to achieve O(1) time complexity for both get and put operations.\n\nFormat: Provide clean, idiomatic Python code with comprehensive docstrings, inline type hints, and a brief usage example demonstrating thread safety with concurrent.futures at the bottom.\n\nConstraints: Do not use third-party libraries (standard library only). Ensure strict thread safety without introducing excessive lock contention. Avoid overly complex custom doubly-linked list implementations if standard library alternatives provide superior maintainability and performance.",
+      "original_total": 7,
+      "improved_total": 49,
+      "original_breakdown": {
+        "Clarity": 3,
+        "Specificity": 1,
+        "Context": 1,
+        "Format": 1,
+        "Constraints": 1
+      },
+      "improved_breakdown": {
+        "Clarity": 10,
+        "Specificity": 10,
+        "Context": 10,
+        "Format": 9,
+        "Constraints": 10
+      },
+      "tips": [
+        "Specify error handling expectations, such as how cache misses or invalid arguments should be handled.",
+        "Define performance benchmarks or metrics if you need the code optimized beyond basic O(1) complexity.",
+        "Clarify whether unit tests should be included alongside the usage example."
+      ],
+      "orig_output": "Here is a simple, versatile Python script that demonstrates a few core concepts (functions, loops, and user input). \n\nThis script plays a **Guess the Number** game:\n\n```python\nimport random\n\ndef guess_the_number():\n    print(\"Welcome to the Guess the Number Game!\")\n    print(\"I'm thinking of a number between 1 and 100.\")\n    \n    # Generate a random number between 1 and 100\n    secret_number = random.randint(1, 100)\n    attempts = 0\n    \n    while True:\n        try:\n            # Get the user's guess\n            guess = int(input(\"Take a guess: \"))\n            attempts += 1\n            \n            # Check the guess\n            if guess < secret_number:\n                print(\"Too low! Try again.\")\n            elif guess > secret_number:\n                print(\"Too high! Try again.\")\n            else:\n                print(f\"Congratulations! You found the number in {attempts} attempts!\")\n                break\n                \n        except ValueError:\n            print(\"Please enter a valid integer.\")\n\n# Run the game\nif __name__ == \"__main__\":\n    guess_the_number()\n```\n\n### How to run it:\n1. Make sure you have Python installed on your computer.\n2. Copy the code above and save it in a file named `game.py`.\n3. Open your terminal or command prompt, navigate to the folder where you saved the file, and run:\n   ```bash\n   python game.py\n   ```\n\n***\n\n**Are you looking for code for a specific project?** Let me know what you want to build (e.g., web scraping, data analysis, a calculator, etc.), and I can write a custom script for you!",
+      "impr_output": "As a Principal Systems Architect, I recommend leveraging `collections.OrderedDict` for this implementation. It is implemented in C within the CPython runtime, providing an efficient doubly-linked list structure that maintains insertion order—perfect for LRU semantics.\n\nBy wrapping this in a `threading.RLock` (reentrant lock), we ensure atomicity for the combined \"check-and-update\" operations required for cache hits and evictions, while maintaining the $O(1)$ complexity requirement.\n\n### Implementation\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import TypeVar, Generic, Optional, Any\n\nK = TypeVar(\"K\")\nV = TypeVar(\"V\")\n\nclass ThreadSafeLRUCache(Generic[K, V]):\n    \"\"\"\n    A thread-safe LRU Cache implementation using OrderedDict.\n    \n    Time Complexity:\n        - get: O(1)\n        - put: O(1)\n    \"\"\"\n\n    def __init__(self, capacity: int):\n        if capacity <= 0:\n            raise ValueError(\"Capacity must be a positive integer.\")\n        \n        self.capacity: int = capacity\n        self.cache: OrderedDict[K, V] = OrderedDict()\n        self.lock: threading.RLock = threading.RLock()\n\n    def get(self, key: K) -> Optional[V]:\n        \"\"\"Retrieve an item. Returns None if key not found.\"\"\"\n        with self.lock:\n            if key not in self.cache:\n                return None\n            # Move to end to mark as most recently used\n            self.cache.move_to_end(key)\n            return self.cache[key]\n\n    def put(self, key: K, value: V) -> None:\n        \"\"\"Add or update an item. Evicts oldest if capacity exceeded.\"\"\"\n        with self.lock:\n            if key in self.cache:\n                self.cache.move_to_end(key)\n            self.cache[key] = value\n            if len(self.cache) > self.capacity:\n                self.cache.popitem(last=False)\n\n    def __len__(self) -> int:\n        with self.lock:\n            return len(self.cache)\n```\n\n### Usage Demonstration\nThe following snippet demonstrates thread safety under high concurrency using `concurrent.futures.ThreadPoolExecutor`.\n\n```python\nimport concurrent.futures\nimport random\n\ndef worker(cache: ThreadSafeLRUCache, i: int):\n    # Simulate high-frequency concurrent access\n    key = random.randint(0, 100)\n    cache.put(key, f\"val_{i}\")\n    cache.get(key)\n\nif __name__ == \"__main__\":\n    # Initialize cache with small capacity to trigger frequent evictions\n    shared_cache = ThreadSafeLRUCache(capacity=50)\n    \n    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:\n        # Submit 1000 concurrent operations\n        futures = [executor.submit(worker, shared_cache, i) for i in range(1000)]\n        concurrent.futures.wait(futures)\n\n    print(f\"Final cache size: {len(shared_cache)}\")\n    print(\"Cache operation sequence completed successfully under contention.\")\n```\n\n### Architectural Notes:\n1.  **Locking Strategy**: I utilized `threading.RLock` (Reentrant Lock). While a standard `threading.Lock` would suffice here, `RLock` provides future-proofing if you decide to extend the class with methods that call other internal methods (preventing self-deadlocks).\n2.  **Performance**: `OrderedDict.move_to_end` and `popitem(last=False)` are implemented in C. This is significantly faster and more memory-efficient than managing a custom doubly-linked list using Python objects, which would incur high overhead due to object pointer tracking and garbage collection.\n3.  **Scalability**: For extremely high-throughput systems where lock contention becomes a bottleneck, consider **Sharded LRU Caching** (partitioning keys by hash into multiple `ThreadSafeLRUCache` instances). This implementation serves as the optimal building block for such a pattern."
+    },
+    {
+      "domain": "Career Development",
+      "weak_prompt": "write a cover letter",
+      "goal": "Apply for a Junior Machine Learning Engineer role",
+      "audience": "AI Startup Hiring Team",
+      "improved_prompt": "Role: You are an expert career coach and professional copywriter specializing in tech industry applications.\n\nContext: I am applying for a Junior Machine Learning Engineer position at an innovative AI startup. The hiring team values practical project experience, foundational knowledge in Python, PyTorch/TensorFlow, and a strong passion for scaling machine learning models in fast-paced environments.\n\nTask: Write a compelling, tailored cover letter that highlights my enthusiasm for the startup space, bridges my current skills to the requirements of a Junior Machine Learning Engineer, and demonstrates clear business value.\n\nFormat: Use a professional cover letter layout including: (1) Header placeholders, (2) A strong hook/introduction, (3) Two body paragraphs detailing relevant technical projects and problem-solving abilities, and (4) A confident call-to-action closing.\n\nConstraints: Keep the tone confident, concise, and professional (no buzzword stuffing). Limit the total length to a single page (under 400 words). Do not include generic filler phrases.",
+      "original_total": 6,
+      "improved_total": 46,
+      "original_breakdown": {
+        "Clarity": 2,
+        "Specificity": 1,
+        "Context": 1,
+        "Format": 1,
+        "Constraints": 1
+      },
+      "improved_breakdown": {
+        "Clarity": 10,
+        "Specificity": 9,
+        "Context": 9,
+        "Format": 9,
+        "Constraints": 9
+      },
+      "tips": [
+        "Include placeholder brackets like [Your Name] or [Insert Project Here] so the AI knows where to insert personal user data.",
+        "Specify the exact target company name or industry niche if you want the cover letter to feel even more tailored.",
+        "Provide a brief summary of your actual background or skills so the AI doesn't have to invent your project history."
+      ],
+      "orig_output": "Because a cover letter needs to be tailored to the specific job you are applying for, I have provided a **fill-in-the-blank template** below, followed by a **completed example** so you can see how it looks in action.\n\n### Option 1: Fill-in-the-Blank Template\n\n[Your Name]  \n[Your Phone Number] | [Your Email Address] | [Your LinkedIn Profile URL/City, State]  \n\n[Date]  \n\n[Hiring Manager’s Name, if known]  \n[Company Name]  \n[Company Address, optional]  \n\n**RE: Application for [Job Title]**\n\nDear [Hiring Manager's Name or \"Hiring Team\"],\n\nI am writing to express my enthusiastic interest in the [Job Title] position at [Company Name]. With my background in [your field/industry] and my proven track record of [mention 1 key skill or achievement, e.g., increasing sales, streamlining operations, managing projects], I am confident in my ability to bring immediate value to your team.\n\nIn my recent role at [Current/Previous Company], I successfully [describe a major accomplishment relevant to the job you are applying for]. This experience allowed me to develop a strong command of [mention a specific tool, skill, or methodology required in the job description]. Whether I am [doing task A] or [doing task B], I am always focused on [mention a company value or goal, e.g., driving efficiency, delivering high-quality results].\n\nI have long admired [Company Name]’s work, particularly [mention something specific you like about the company, e.g., your recent product launch, your commitment to sustainability, your innovative company culture]. I am eager to bring my dedication and skills to your team and help contribute to your continued success.\n\nThank you for your time and consideration. I welcome the opportunity to discuss how my background and experiences make me a great fit for the [Job Title] role. \n\nSincerely,\n\n[Your Name]\n\n***\n\n### Option 2: Completed Example (Marketing Role)\n\nJane Doe  \n555-123-4567 | jane.doe@email.com | linkedin.com/in/janedoe | Boston, MA  \n\nOctober 24, 2023  \n\nSarah Jenkins  \nDirector of Marketing  \nGrowthify Media  \nBoston, MA  \n\n**RE: Application for Digital Marketing Specialist**\n\nDear Sarah Jenkins,\n\nI am writing to express my enthusiastic interest in the Digital Marketing Specialist position at Growthify Media. With over three years of experience in content creation and paid social campaigns, combined with a proven track record of increasing brand engagement, I am confident in my ability to bring immediate value to your marketing team.\n\nIn my current role as a Marketing Coordinator at Apex Solutions, I successfully managed cross-channel digital campaigns that resulted in a 35% increase in lead generation over six months. This experience allowed me to deepen my expertise in SEO, Google Analytics, and targeted social media advertising. Whether I am analyzing campaign metrics to optimize performance or writing engaging ad copy, I am always focused on delivering data-driven results that align with overarching business goals.\n\nI have long admired Growthify Media’s work, particularly your recent campaign for the EcoHome brand, which brilliantly blended storytelling with measurable impact. I am eager to bring my creativity, analytical mindset, and dedication to your team and help contribute to your clients' continued success.\n\nThank you for your time and consideration. I welcome the opportunity to discuss how my background and experiences make me a great fit for the Digital Marketing Specialist role. \n\nSincerely,\n\nJane Doe\n\n***\n\n### Tips before you send:\n1. **Keep it to one page:** Recruiters spend very little time reading each letter. Keep your paragraphs concise.\n2. **Tailor keywords:** Look at the job description and make sure you use some of the exact words they use (e.g., \"project management,\" \"customer service,\" \"data analysis\").\n3. **Proofread:** Double-check that you’ve changed the company name and job title if you are using the template multiple times! \n\n*If you’d like me to write a custom cover letter for you, just paste the job description and a brief summary of your work history/resume below!*",
+      "impr_output": "[Your Name]  \n[Your Phone Number] | [Your Email Address] | [Your LinkedIn URL] | [Your GitHub/Portfolio URL]  \n\n[Date]  \n\n[Hiring Manager Name or \"Machine Learning Hiring Team\"]  \n[Company Name]  \n[Company Address]  \n\nDear [Hiring Manager Name or \"Machine Learning Team\"],\n\nStartups succeed by turning research into scalable products faster than the competition. I am applying for the Junior Machine Learning Engineer position at [Company Name] because your recent work in [mention a specific company project, product, or research area] exemplifies this exact philosophy. As an engineer who thrives in fast-paced environments, I am eager to contribute my foundational expertise in PyTorch and production-ready Python to help scale your core models.\n\nMy practical project experience centers on bridging the gap between raw data and efficient model deployment. In my recent project, [Name of Key Project/System], I engineered a [e.g., computer vision / NLP] pipeline using PyTorch, optimizing model inference speed by 35% through quantization and pruning. Recognizing the realities of production constraints, I utilized Docker and FastAPI to containerize and deploy the model as a microservice, ensuring it could handle asynchronous requests reliably. This hands-on experience taught me that building a great model is only half the battle; writing clean, modular Python code and monitoring performance drift in deployment are what drive actual business value.\n\nBeyond model architecture, I approach machine learning through a lens of product impact. During my time building [Another Project or Academic Research], I collaborated with cross-functional peers to tie model accuracy metrics directly to user engagement goals. I understand that at [Company Name], agility and iterative testing are paramount. Whether I am writing clean data ingestion scripts, fine-tuning transformer architectures, or debugging gradient bottlenecks, I am driven by the goal of shipping reliable features that directly accelerate your product roadmap.\n\nI would welcome the opportunity to discuss how my technical foundation and drive can support your engineering team. Thank you for your time and consideration; I look forward to the possibility of speaking with you soon.\n\nSincerely,  \n\n[Your Name]"
+    }
+  ]
+}
