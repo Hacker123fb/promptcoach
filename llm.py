@@ -74,42 +74,58 @@ def _parse_json_robust(raw: str) -> dict:
             ) from exc
 
 
+def _candidate_models() -> list[str]:
+    primary = _model_name()
+    candidates = [primary, "gemini-3.5-flash", "gemini-3.7-flash"]
+    seen = set()
+    result = []
+    for c in candidates:
+        if c and c not in seen:
+            seen.add(c)
+            result.append(c)
+    return result
+
+
 def _chat(system_prompt: str, user_message: str, *, retry: bool = True) -> str:
     """
     Send a single-turn system+user message to Gemini and return the text.
-    Retries once on rate-limit / transient errors.
+    Retries once on rate-limit / transient errors, and falls back across candidate models.
     """
     from google.genai import types
 
     client = get_client()
-    model = _model_name()
+    models = _candidate_models()
+    last_exc = None
 
-    def _call():
-        response = client.models.generate_content(
-            model=model,
-            contents=user_message,
-            config=types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                temperature=0.4,
-            ),
-        )
-        return response.text
+    for m in models:
+        def _call(model_id: str):
+            response = client.models.generate_content(
+                model=model_id,
+                contents=user_message,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0.4,
+                ),
+            )
+            return response.text
 
-    try:
-        return _call()
-    except Exception as first_exc:
-        err_str = str(first_exc).lower()
-        # Retry once on rate-limit or transient server errors
-        if retry and any(k in err_str for k in ("429", "rate", "503", "500", "timeout")):
-            import time
-            time.sleep(3)
-            try:
-                return _call()
-            except Exception as second_exc:
-                raise RuntimeError(
-                    f"Gemini call failed after retry: {second_exc}"
-                ) from second_exc
-        raise RuntimeError(f"Gemini call failed: {first_exc}") from first_exc
+        try:
+            return _call(m)
+        except Exception as first_exc:
+            last_exc = first_exc
+            err_str = str(first_exc).lower()
+            if retry and any(k in err_str for k in ("429", "rate", "503", "500", "timeout", "unavailable")):
+                import time
+                time.sleep(2)
+                try:
+                    return _call(m)
+                except Exception as second_exc:
+                    last_exc = second_exc
+                    continue
+            elif any(k in err_str for k in ("404", "not found", "no longer available")):
+                continue
+
+    raise RuntimeError(f"Gemini call failed across models: {last_exc}")
 
 
 # ---------------------------------------------------------------------------
@@ -146,17 +162,25 @@ def run_prompt(prompt: str) -> str:
     from google.genai import types
 
     client = get_client()
-    model = _model_name()
+    models = _candidate_models()
+    last_exc = None
 
-    try:
-        response = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=types.GenerateContentConfig(temperature=0.7),
-        )
-        return response.text
-    except Exception as exc:
-        raise RuntimeError(f"Gemini call failed for prompt execution: {exc}") from exc
+    for m in models:
+        try:
+            response = client.models.generate_content(
+                model=m,
+                contents=prompt,
+                config=types.GenerateContentConfig(temperature=0.7),
+            )
+            return response.text
+        except Exception as exc:
+            last_exc = exc
+            err_str = str(exc).lower()
+            if any(k in err_str for k in ("404", "503", "unavailable", "rate", "429")):
+                continue
+            raise RuntimeError(f"Gemini call failed for prompt execution: {exc}") from exc
+
+    raise RuntimeError(f"Gemini call failed for prompt execution across models: {last_exc}")
 
 
 def score_prompts(original: str, improved: str) -> dict:

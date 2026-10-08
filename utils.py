@@ -52,15 +52,19 @@ def get_api_key() -> str:
 def get_model_name() -> str:
     """
     Retrieve Gemini model name from Streamlit secrets, then environment variable,
-    falling back to 'gemini-2.5-flash'.
+    falling back to 'gemini-3.5-flash'. Automatically upgrades deprecated model names.
     """
     try:
         import streamlit as st
         if hasattr(st, "secrets") and "MODEL_NAME" in st.secrets:
             val = str(st.secrets["MODEL_NAME"]).strip()
-            if val:
+            if val and val not in ("gemini-2.5-flash", "gemini-2.0-flash"):
                 return val
     except Exception:
         pass
 
-    return os.getenv("MODEL_NAME", "gemini-2.5-flash").strip()
+    env_val = os.getenv("MODEL_NAME", "").strip()
+    if env_val and env_val not in ("gemini-2.5-flash", "gemini-2.0-flash"):
+        return env_val
+
+    return "gemini-3.5-flash"
